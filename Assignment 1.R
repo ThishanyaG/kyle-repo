@@ -128,7 +128,8 @@ Regional_filtering_analysis <- function(whole_set, country_list, region_list = N
       filter(country %in% country_list | region %in% region_list)}
   else{
     lst <- whole_set %>%
-      filter(country %in% country_list)}
+      filter(country %in% country_list)
+    }
   # Print the number of unique species and the unique species names in each group to compare species richness of each group. 
   print(length(lst$species_name))
   print(unique(lst$species_name))
@@ -151,7 +152,7 @@ AS_countries <- c('China','Uzbekistan', 'Kazakhstan', 'Turkmenistan', 'Iran')
 AS_regions <- c('Ob River', 'Selenga River','Lena River', 'Yenisei River' , 'Amur River')
 EU_countries <- c('Austria', 'Azerbaijan', 'Italy', 'Turkey', 'Germany' , 'Czech Republic', 'Hungary', 'France', 'Ukraine', 'Romania' , 'Slovakia' , 'United Kingdom')
 EU_regions <- c('Volga River', 'Astrakhan')
-AS_EU_countries <- c('China','Uzbekistan', 'Kazakhstan', 'Turkmenistan', 'Iran', 'Austria', 'Azerbaijan', 'Italy', 'Turkey', 'Germany' , 'Czech Republic', 'Hungary', 'France', 'Ukraine', 'Romania' , 'Slovakia' , 'United Kingdom')
+AS_EU_countries <- c('China','Uzbekistan', 'Kazakhstan', 'Turkmenistan', 'Iran', 'Austria', 'Azerbaijan', 'Italy', 'Turkey', 'Germany' , 'Czech Republic', 'Hungary', 'France', 'Ukraine', 'Romania' , 'Slovakia' , 'United Kingdom', 'Russia')
 
 
 #### Call the Regional_filtering_analysis function with created lists
